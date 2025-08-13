@@ -1,0 +1,5 @@
+# Ignore node depedencies node_modules/
+
+# Ignore SQLite database file task.db
+
+# Ignore any log files *.log
