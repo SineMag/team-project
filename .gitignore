@@ -3,3 +3,6 @@
 # Ignore SQLite database file task.db
 
 # Ignore any log files *.log
+
+node_modules/
+tasks.db
