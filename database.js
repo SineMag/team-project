@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('tasks.db', (err) => {
+const db = new sqlite3.Database('./tasks.db', (err) => {
     if (err) console.error(err.message);
     else console.log('Connected to tasks database.');
 });
@@ -13,3 +13,4 @@ db.run(`CREATE TABLE IF NOT EXISTS tasks (
     if (err) console.error(err.message);
 });
 module.exports = db;
+
