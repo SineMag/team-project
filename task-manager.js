@@ -66,3 +66,15 @@ const db = new sqlite3.Database('./tasks.db', (err) => {
 });
 module.exports = db;
 
+
+
+const db = require("./database");
+
+function createTask(name) {
+  db.run(`INSERT INTO tasks (name) VALUES (?)`, [name], function (err) {
+    if (err) {
+      return console.error(err.message);
+    }
+    console.log("Task added with ID:", this.lastID);
+  });
+}
